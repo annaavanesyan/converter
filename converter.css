@@ -1,0 +1,55 @@
+.heading_picture{
+    height: 100px;
+    background: url('background.png');
+}
+
+#menu{
+    border: 1px solid grey;
+    padding: 10px;
+    background: url('1.png');
+}
+
+.heading{
+    padding-bottom: 50px;
+}
+
+#temperature_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#length_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#weight_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#speed_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#area_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#time_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#frequency_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
+#money_bar{
+    visibility: hidden;
+    margin: 0;
+}
+
