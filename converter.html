@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>anna's chudo converter</title>
+    <link rel="stylesheet" type="text/css" href="converter.css">
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div class = "container-fluid heading_picture">
+    <div class="row">
+        <div class="col-md-12">
+        </div>
+    </div>
+</div>
+
+<div class = "container-fluid">
+    <div class="col-md-2 text-center menu_bar">
+        <h4 id="menu">measurement units.</h4>
+        <div class="list-group">
+
+            <button id="second" type="button" class="list-group-item" onclick="temperature_unit()">temperature</button>
+            <button type="button" class="list-group-item" onclick="length_unit()">length</button>
+            <button type="button" class="list-group-item" onclick="weight_unit()">weight</button>
+            <button type="button" class="list-group-item" onclick="speed_unit()">speed</button>
+
+            <button type="button" class="list-group-item" onclick="area_unit()">area</button>
+            <button type="button" class="list-group-item" onclick="time_unit()">time</button>
+            <button type="button" class="list-group-item" onclick="frequency_unit()">frequency</button>
+            <button type="button" class="list-group-item" onclick="money_unit()">money</button>
+
+        </div>
+
+    </div>
+    <div class="col-md-10">
+
+        <div class="row">
+            <div class="col-md-12 text-center heading">
+                <h3> Please enter the values </h3>
+            </div>
+        </div>
+
+
+        <div class="container" id="temperature_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar1">Celsius</h4>
+                    <input id="celsius_input" class="input input-lg" value="" onkeyup="changeToF() "> °C
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar1">Fahrenheit</h4>
+                    <input id="fahrenheit_input" class="input input-lg" value="" onkeyup="changeToC() "> °F
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="length_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar2">Meter</h4>
+                    <input id="meter_input" class="input input-lg" value="" onkeyup="changeToCentimeter() "> m
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar2">Centimeter</h4>
+                    <input id="centimeter_input" class="input input-lg" value="" onkeyup="changeToMeter() "> cm
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="weight_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar3">Gram</h4>
+                    <input id="gram_input" class="input input-lg" value="" onkeyup="changeToKilogram() "> g
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar3">Kilogram</h4>
+                    <input id="kilogram_input" class="input input-lg" value="" onkeyup="changeToGram() "> kg
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="speed_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar4">Metre per second</h4>
+                    <input id="metre_input" class="input input-lg" value="" onkeyup="changeToKilometre() "> m/s
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar4">Kilometre per hour</h4>
+                    <input id="kilometre_input" class="input input-lg" value="" onkeyup="changeToMetre() "> km/h
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="area_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar5">Metre per second</h4>
+                    <input id="squarem_input" class="input input-lg" value="" onkeyup="changeToSquarem() "> square m
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar5">Kilometre per hour</h4>
+                    <input id="squarekm_input" class="input input-lg" value="" onkeyup="changeTosquarekm() "> square km
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="time_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar6">Minute</h4>
+                    <input id="minute_input" class="input input-lg" value="" onkeyup="changeToMinute() "> min
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar6">Hours</h4>
+                    <input id="hour_input" class="input input-lg" value="" onkeyup="changeToHour() "> h
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="frequency_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar7">Hertz</h4>
+                    <input id="hertz_input" class="input input-lg" value="" onkeyup="changeToKilohertz() "> h
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar7">Kilohertz</h4>
+                    <input id="kilohertz_input" class="input input-lg" value="" onkeyup="changeToHertz() "> kh
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="money_bar">
+
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <h4 id="first_bar8">Dram</h4>
+                    <input id="dram_input" class="input input-lg" value="" onkeyup="changeToDollar() "> dram
+
+                </div>
+
+                <div class="col-md-6 text-center">
+
+                    <h4 id="second_bar8">Dollar</h4>
+                    <input id="dollar_input" class="input input-lg" value="" onkeyup="changeToDram() "> $
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='converter.js'></script>
+</body>
