@@ -1,5 +1,7 @@
 
 var valueReg = /\d+/g;
+var dollarDram = 481.70;
+
 var temperature = document.getElementById('temperature_bar');
 var length = document.getElementById('length_bar');
 var weight = document.getElementById('weight_bar');
@@ -126,14 +128,58 @@ function changeToSquarem(){
     var squarem1= document.getElementById('squarem_input').value;
     var squarekm= document.getElementById('squarekm_input');
 
-    var squarem = square1.match(valueReg).join([]);
-    squarekm.value= squarem *1;
+    var squarem = squarem1.match(valueReg).join([]);
+    squarekm.value= squarem * 0.000001;
 }
-
 function changeTosquarekm(){
     var squarem= document.getElementById('squarem_input');
     var squarekm1= document.getElementById('squarekm_input').value;
 
-    var squarekm = fahrenheit1.match(valueReg).join([]);
-    squarem.value = squarekm *1;
+    var squarekm = squarekm1.match(valueReg).join([]);
+    squarem.value = squarekm *100000;
+}
+
+function changeToHour(){
+    var minute1= document.getElementById('minute_input').value;
+    var hour= document.getElementById('hour_input');
+
+    var minute = minute1.match(valueReg).join([]);
+    hour.value= minute * 60;
+}
+function changeToMinute(){
+    var minute= document.getElementById('minute_input');
+    var hour1= document.getElementById('hour_input').value;
+
+    var hour = hour1.match(valueReg).join([]);
+    minute.value = hour /60;
+}
+
+function changeToKilohertz(){
+    var hertz1= document.getElementById('hertz_input').value;
+    var kilohertz= document.getElementById('kilohertz_input');
+
+    var hertz = hertz1.match(valueReg).join([]);
+    kilohertz.value= hertz / 1000;
+}
+function changeToHertz(){
+    var hertz= document.getElementById('hertz_input');
+    var kilohertz1= document.getElementById('kilohertz_input').value;
+
+    var kilohertz = kilohertz1.match(valueReg).join([]);
+    hertz.value = kilohertz *1000;
+}
+
+function changeToDollar(){
+    var dram1= document.getElementById('dram_input').value;
+    var dollar= document.getElementById('dollar_input');
+
+    var dram = dram1.match(valueReg).join([]);
+    dollar.value= dram / dollarDram;
+}
+function changeToDram(){
+    var dram= document.getElementById('dram_input');
+    var dollar1= document.getElementById('dollar_input').value;
+
+    var dollar = dollar1.match(valueReg).join([]);
+    dram.value = dollar * dollarDram;
 }
