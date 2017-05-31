@@ -9,6 +9,10 @@
     background: url('1.png');
 }
 
+.body_menu{
+    background: url('bg.png');
+}
+
 .heading{
     padding-bottom: 50px;
 }
